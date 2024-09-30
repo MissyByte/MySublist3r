@@ -10,6 +10,9 @@ sudo apt install sublist3r
 
 ### Dependancies
 >> Sublist3r depends on the requests, dnspython and argparse python modules.
+While trying to install the dependancies I ran into an error(Screenshots)
+So I ended up reading a little about the python environment and in this case the package manahers pip and apt were conflicting.
+Alot of stuff here aboutthe environments. So let's just fix our issu. 
 
 ### Usage
 ## Basic Usage: To perform a basic subdomain enumeration, simply run Sublist3r with the target domain as an argument:
