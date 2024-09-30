@@ -1,0 +1,36 @@
+A few notes on Sublist3r!
+>> A python tool enumerate subdomains of websites using OSINT. 
+>> Collect and gather subdomains for a targe domain. Identifying subdomains is crucial for discovering potential vulnerabilities and attack vectors.
+>> Uses search engines such as Google, Yahoo, Bing, Baidu, and Ask. 
+>> Sublist3r also enumerates subdomains using Netcraft, Virustotal, ThreatCrowd, DNSdumpster, and ReverseDNS.
+>> Subbrute was integrated with Sublist3r to increase the possibility of finding more subdomains using bruteforce with an improved wordlist.
+
+## Installation
+sudo apt install sublist3r
+
+### Dependancies
+>> Sublist3r depends on the requests, dnspython and argparse python modules.
+
+### Usage
+## Basic Usage: To perform a basic subdomain enumeration, simply run Sublist3r with the target domain as an argument:
+
+bash >> sublist3r -d example.com
+
+### Enumerate Subdomains with Output
+>> You can save the results to a file using the -o flag:
+>> bash >> sublist3r -d example.com -o output.txt
+
+###Sublist3r provides various output formats.
+Text, CSV, and JSON. Use the -o flag followed by the desired output format:
+bash: sublist3r -d example.com -o json -o output.json
+
+### Use multiple search engines: use the flag -e to specify the engine that will be used.
+sublist3r -d example.com -e google,bing,yahoo
+
+### Verbose Mode
+To get more detailed information about the enumeration process using -v flag:
+bash::sublist3r -d example.com -v
+
+### Use a custom wordlist
+Improve the accuracy of subdomain discovery. Use the -b flag to specify a wordlist file:
+bash::sublist3r -d example.com -b custom_wordlist.tx
