@@ -12,11 +12,10 @@ sudo apt install sublist3r
 >> Sublist3r depends on the requests, dnspython and argparse python modules.
 While trying to install the dependancies I ran into an error(Screenshots)
 So I ended up reading a little about the python environment and in this case the package manahers pip and apt were conflicting.
-Alot of stuff here aboutthe environments. So let's just fix our issu. 
+Alot of stuff here aboutthe environments. So let's just fix our issue. 
 
-### Usage
+### Function Usage
 ## Basic Usage: To perform a basic subdomain enumeration, simply run Sublist3r with the target domain as an argument:
-
 bash >> sublist3r -d example.com
 
 ### Enumerate Subdomains with Output
@@ -36,4 +35,10 @@ bash::sublist3r -d example.com -v
 
 ### Use a custom wordlist
 Improve the accuracy of subdomain discovery. Use the -b flag to specify a wordlist file:
-bash::sublist3r -d example.com -b custom_wordlist.tx
+bash::sublist3r -d example.com -b custom_wordlist.txt
+
+### Bruteforce mode
+Sublist3r’s brute-force mode is a feature that attempts to brute-force subdomain enumeration by using a wordlist. 
+It systematically generates potential subdomains by appending different prefixes (from the wordlist) to the target domain.
+I used this mode to enumerate subdomains for my target.
+       └─$ sublist3r -v -d target.com -e  bing -o ~/Desktop/chali.txt -b
